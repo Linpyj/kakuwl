@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Picture;
 
 class PictureController extends Controller
 {
@@ -23,7 +24,8 @@ class PictureController extends Controller
      */
     public function create()
     {
-        //
+        $picture = new Picture;
+        return view('picture/create', ['picture' => $picture]);
     }
 
     /**
@@ -34,7 +36,7 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo 'やい！';
     }
 
     /**
